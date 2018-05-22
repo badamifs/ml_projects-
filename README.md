@@ -1,4 +1,4 @@
-# Basic machine learning 
+# machine learning projects
 This repo is just me practicing data clean ups and modelling different data types into various ml models
 
 Steps taken:
@@ -31,3 +31,6 @@ Installation:
 Usage:
 
 ``python -m py2nb input.py output.ipynb``
+
+# Basic ml
+check out the notebook basic_ml.ipynb. This gives you a basic framework for splitting, visualizing and predicting. You can use this framework with different datsets and test which algorith works best for your dataset.
