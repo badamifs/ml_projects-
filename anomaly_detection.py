@@ -84,16 +84,6 @@ def noise(yval):
     np.random.seed(0)
     return 0.2*np.asarray(yval)*np.random.normal(size=len(yval))
 
-# Generate a random dataset
-def generate_random_dataset(size_of_array=1000, random_state=0):
-
-    np.random.seed(random_state)
-    y = np.random.normal(0, 0.5, size_of_array)
-    x = range(0, size_of_array)
-    y_new = [y_i + index**((size_of_array - index)/size_of_array) +  noise(y)
-    for index, y_i in izip(count(), y)]
-    return x, pd.Series(y_new)
-
 x = data_as_frame['Hour']
 Y = data_as_frame['Internet traffic data']
 
