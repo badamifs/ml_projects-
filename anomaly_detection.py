@@ -63,7 +63,7 @@ def plot_results(x, y, window_size, sigma_value=1,
     plt.xlabel(text_xlabel)
     plt.ylabel(text_ylabel)
 
-    # Query for the anomalies and plot the same
+    #Query for the anomalies and plot
     events = {}
     if applying_rolling_std:
         events = explain_anomalies_rolling_std(y, window_size=window_size, sigma=sigma_value)
@@ -75,19 +75,14 @@ def plot_results(x, y, window_size, sigma_value=1,
                                             count=len(events['anomalies_dict']))
     plt.plot(x_anomaly, y_anomaly, "r*", markersize=12)
 
-    # add grid and lines and enable the plot
+    #enable the plot
     plt.grid(True)
     plt.show()
-
-def noise(yval):
-    """ Helper function to generate random points """
-    np.random.seed(0)
-    return 0.2*np.asarray(yval)*np.random.normal(size=len(yval))
 
 x = data_as_frame['Hour']
 Y = data_as_frame['Internet traffic data']
 
-# plot the results
+#plot  results
 plot_results(x, y=Y, window_size=10, text_xlabel="Hour", sigma_value=3,
              text_ylabel="Internet traffic data (in bits)")
 events = explain_anomalies(Y, window_size=5, sigma=3)
@@ -95,7 +90,7 @@ events = explain_anomalies(Y, window_size=5, sigma=3)
 lag_plot(data_as_frame)
 plt.show()
 
-# Display the anomaly dict
+#final 
 print("Information about the anomalies model:{}".format(events))
 
 
