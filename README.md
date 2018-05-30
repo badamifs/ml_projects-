@@ -16,7 +16,9 @@ sublime: https://www.sublimetext.com/
 
 atom: https://atom.io/
 
-atom has some cool features and github integrations. Highly recommend. 
+atom has some cool features and github integrations. Highly recommend (especially look into the hydrogen feature). Interesting atom+markdown+pandoc+jupyter notebook workflow: 
+
+https://www.reddit.com/r/Python/comments/8mqd40/convenient_and_easily_tweakable/?st=JHSQ9XF4&sh=d370eefa
 
 Next, I type up my code and convert it to a jupyter notebook for a more interactive display. you can also directly start with a notebook but I prefer this conversion method:
 
