@@ -34,3 +34,10 @@ Usage:
 
 # Basic ml
 check out the notebook basic_ml.ipynb. This gives you a basic framework for splitting, visualizing and predicting. You can use this framework with different datsets and test which algorith works best for your dataset.
+
+# Anomaly detection
+This technique works well when you know most of your dataset is negative (i.e. does not meet anomaly criteria) and only has a small subset of postive outcomes (i.e. meet anomaly criteria)
+
+In the code I use a simple moving average approach to get trends and then mark anything 3 standard deviations away from the moving avergage as an anomaly
+
+Very useful with time series data. I visualized using a simple plot funtion and a lag_plot within the panda library. The lag plot does a good job at detecting outliers as well. 
